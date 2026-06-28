@@ -1,9 +1,11 @@
+
 import React from 'react';
 import {singleRoom} from '../../../lib/engine'
 
 import Image from 'next/image';
 import { HiOutlineLocationMarker, HiOutlineUsers, HiOutlineSparkles } from 'react-icons/hi';
 import { BiDollarCircle, BiChevronLeft } from 'react-icons/bi';
+import BookButton from '@/Components/BookButton';
 const Detailspage = async({params}) => {
 
     const {id}= await params
@@ -101,12 +103,7 @@ const Detailspage = async({params}) => {
 
             {/* ৫. বুক নাও বাটন সেকশন */}
             <div className="mt-6 lg:mt-auto">
-              <button 
-                
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base py-4 rounded-xl transition-all duration-300 shadow-md shadow-blue-200/50 hover:shadow-lg active:scale-[0.99] tracking-wide"
-              >
-                Book This Room Now
-              </button>
+              <BookButton room={room}></BookButton>
               
             </div>
 

@@ -55,6 +55,11 @@ const router = useRouter()
         
      }
   };
+  const signIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10">
@@ -132,8 +137,13 @@ const router = useRouter()
           </div>
 
           <Button className="w-full" color="primary" type="submit">
-            Submit
+            Sign Up
           </Button>
+
+          <div className='w-full mx-auto flex flex-col items-center  my-3'>
+            <p>Or</p>
+            <Button onClick={signIn}>Login With Google</Button>
+          </div>
 
         </Form>
          <p className="text-center text-sm text-gray-600">

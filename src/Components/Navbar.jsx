@@ -13,7 +13,7 @@ const Navbar = () => {
 
      const user = data?.user
 
-     console.log(user?.name,user?.imageUrl)
+     
 
    
 

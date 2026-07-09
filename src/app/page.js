@@ -2,12 +2,16 @@ import Image from "next/image";
 import Dashboard from '../Components/Dashboard.jsx'
 import { homeRooms } from "@/lib/engine.js";
 import RoomCard from "@/Components/RoomCard.jsx";
+export const metadata = {
+  title: 'Home', 
+  description: 'Welcome to the Book Nook, your ultimate destination for discovering and booking the perfect rooms for your needs. Explore our diverse selection of rooms, from cozy spaces to luxurious suites, all designed to provide comfort and convenience.',
+};
 
 export default async function Home() {
 
   const rooms = await homeRooms();
 
-  console.log(rooms)
+ 
 
 
   

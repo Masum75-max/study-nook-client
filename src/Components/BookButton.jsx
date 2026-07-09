@@ -12,7 +12,7 @@ const BookButton = ({room}) => {
 
     const addToBookings=async ()=>{
 
-    const res = await fetch('http://localhost:5000/bookings', {
+    const res = await fetch('https://server-book-nook.vercel.app/bookings', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'

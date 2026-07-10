@@ -12,13 +12,15 @@ const Detailspage = async({params}) => {
 
     const {id}= await params
 
-    const token = await auth.api.getToken({
+    const {token} = await auth.api.getToken({
       headers:await headers()
     })
 
    
 
     const room = await singleRoom(id,token)
+
+    
 
     const { name, image, description, floor, capacity, hourlyRate, amenities = [] } = room
     return (
@@ -41,7 +43,7 @@ const Detailspage = async({params}) => {
           <div className="lg:col-span-6 xl:col-span-7">
             <div className="relative h-[300px] sm:h-[400px] lg:h-[480px] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-inner">
               <Image
-                src={image || defaultImage}
+                src={image}
                 alt={name}
                 fill
                 priority 
@@ -74,7 +76,7 @@ const Detailspage = async({params}) => {
              
               <div className="flex items-center gap-1.5 my-5 bg-emerald-50/60 border border-emerald-100/50 w-fit px-4 py-2 rounded-xl">
                 <BiDollarCircle className="text-emerald-600 text-2xl" />
-                <span className="text-xl font-bold text-gray-900">{hourlyRate.replace('$', '')}</span>
+                <span className="text-xl font-bold text-gray-900">{hourlyRate?.replace('$', '')}</span>
                 <span className="text-sm text-gray-500 font-medium"></span>
               </div>
 

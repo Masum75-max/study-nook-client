@@ -47,7 +47,7 @@ export default function RoomForm() {
     };
 
     try {
-      const res = await fetch("https://server-book-nook.vercel.app/allrooms", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/allrooms`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

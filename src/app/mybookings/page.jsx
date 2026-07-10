@@ -19,7 +19,7 @@ const MyBookingsPage = async() => {
       const id= session.user.id
       
 
-      const res = await fetch(`https://server-book-nook.vercel.app/mybookings/${id}`,{
+      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/mybookings/${id}`,{
         headers:{
           authorization:`Bearer ${token}`
         }

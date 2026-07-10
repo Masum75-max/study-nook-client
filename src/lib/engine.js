@@ -1,6 +1,6 @@
 
 export const homeRooms = async()=>{
-    const res = await fetch('https://server-book-nook.vercel.app/homerooms')
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/homerooms`)
 
     const rooms=  await res.json();
 
@@ -8,7 +8,7 @@ export const homeRooms = async()=>{
 }
 
 export const allRooms = async(token)=>{
-    const res = await fetch('https://server-book-nook.vercel.app/allrooms',{
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/allrooms`,{
         headers:{
             authorization:`Bearer ${token}`
         }
@@ -19,7 +19,7 @@ export const allRooms = async(token)=>{
 }
 
 export const singleRoom = async(id,token)=>{
-    const res = await fetch(`https://server-book-nook.vercel.app/allrooms/${id}`,{
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/allrooms/${id}`,{
         headers:{
             authorization:`Bearer ${token}`
         }

@@ -23,9 +23,9 @@ const Navbar = () => {
         <nav className="bg-white  h-30 border-b border-gray-200 sticky top-0 z-50 px-4 py-3 md:px-8">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 
-                {/* ১. মোবাইল হামবার্গার মেনু এবং লোগো (পাশাপাশি থাকবে) */}
+              
                 <div className="flex justify-between w-full md:w-auto md:justify-start items-center gap-4">
-                    {/* Hamburger Button (Sudhu mobile-e dekhabe) */}
+                    
                     <button 
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden text-gray-700 focus:outline-none p-1"

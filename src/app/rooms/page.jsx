@@ -1,8 +1,7 @@
 import React from 'react';
 import { allRooms } from '@/lib/engine';
 import RoomCard from '@/Components/RoomCard';
-import { auth } from '@/lib/auth';
-import { headers } from 'next/headers';
+
 
 export const metadata ={
   title: 'Rooms'

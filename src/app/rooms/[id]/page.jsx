@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { HiOutlineLocationMarker, HiOutlineUsers, HiOutlineSparkles } from 'react-icons/hi';
 import { BiDollarCircle, BiChevronLeft } from 'react-icons/bi';
 import BookButton from '@/Components/BookButton';
+export const dynamic = 'force-dynamic';
 const Detailspage = async({params}) => {
 
     const {id}= await params
